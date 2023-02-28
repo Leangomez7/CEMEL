@@ -1,0 +1,11 @@
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.csproj.AssemblyReference.cache
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.csproj.SuggestedBindingRedirects.cache
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.PantallaIniciarSesion.resources
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.Properties.Resources.resources
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.csproj.GenerateResource.cache
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.csproj.CoreCompileInputs.cache
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\bin\Debug\CEMEL.exe.config
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\bin\Debug\CEMEL.exe
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\bin\Debug\CEMEL.pdb
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.exe
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.pdb

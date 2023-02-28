@@ -48,20 +48,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\AccesoADatos.cs" />
+    <Compile Include="Negocio\Entidades\Encriptacion\Encriptador.cs" />
+    <Compile Include="Negocio\Entidades\Sesion.cs" />
     <Compile Include="Negocio\Entidades\Usuario.cs" />
     <Compile Include="Negocio\Entidades\Validacion\Validador.cs" />
-    <Compile Include="Presentacion\IniciarSesion\Login.cs">
+    <Compile Include="Negocio\Menu\GestorMenu.cs" />
+    <Compile Include="Presentacion\IniciarSesion\PantallaIniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentacion\IniciarSesion\Login.Designer.cs">
-      <DependentUpon>Login.cs</DependentUpon>
+    <Compile Include="Presentacion\IniciarSesion\PantallaIniciarSesion.Designer.cs">
+      <DependentUpon>PantallaIniciarSesion.cs</DependentUpon>
     </Compile>
     <Compile Include="Negocio\IniciarSesion\adUsuarios.cs" />
     <Compile Include="Negocio\IniciarSesion\GestorIniciarSesion.cs" />
+    <Compile Include="Presentacion\Menu\PantallaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Menu\PantallaMenu.Designer.cs">
+      <DependentUpon>PantallaMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Presentacion\IniciarSesion\Login.resx">
-      <DependentUpon>Login.cs</DependentUpon>
+    <EmbeddedResource Include="Presentacion\IniciarSesion\PantallaIniciarSesion.resx">
+      <DependentUpon>PantallaIniciarSesion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

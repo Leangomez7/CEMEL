@@ -1,6 +1,6 @@
 ﻿namespace CEMEL
 {
-    partial class Login
+    partial class PantallaIniciarSesion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -75,9 +75,9 @@
             this.btnIniciarSesion.TabIndex = 4;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.UseVisualStyleBackColor = true;
-            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            this.btnIniciarSesion.Click += new System.EventHandler(this.BtnIniciarSesion_Click);
             // 
-            // Login
+            // PantallaIniciarSesion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -87,7 +87,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContrasenia);
             this.Controls.Add(this.txtUsername);
-            this.Name = "Login";
+            this.Name = "PantallaIniciarSesion";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

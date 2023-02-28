@@ -8,13 +8,21 @@ namespace CEMEL.Negocio.Entidades.Validacion
 {
     public static class Validador
     {
+        /// <summary>
+        /// Valida si una cadena recibida está vacía
+        /// </summary>
+        /// <param name="texto"></param>
+        /// <returns>
+        /// true: la cadena no está vacía
+        /// false: la cadena está vacía
+        /// </returns>
         public static bool ValidarVacio(string texto)
         {
-            if (texto == String.Empty)
+            if (texto == "")
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
     }
 }
