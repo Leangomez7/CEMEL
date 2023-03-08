@@ -2,6 +2,7 @@
 using CEMEL.Negocio.Entidades.Encriptacion;
 using CEMEL.Negocio.Entidades.Validacion;
 using CEMEL.Presentacion.Menu;
+using System;
 using System.Data;
 using System.Runtime;
 using System.Security.Cryptography;
@@ -28,7 +29,7 @@ namespace CEMEL.Negocio.Usuarios
                 }
                 else
                 {
-                    MessageBox.Show("No se encontró al usuario {}.", username);
+                    MessageBox.Show(String.Format("No se encontró al usuario {0}.", username));
                 }
             }
             else
@@ -85,7 +86,7 @@ namespace CEMEL.Negocio.Usuarios
         }
 
         /// <summary>
-        /// 
+        /// Si la contraseña es correcta hace todo lo necesario para poder abrir el menu principal
         /// </summary>
         /// <param name="password"></param>
         /// <param name="userTable"></param>
@@ -95,19 +96,18 @@ namespace CEMEL.Negocio.Usuarios
             if (ValidarContrasenia(password, userTable))
             {
                 // Crea el usuario
-                string _username = (string)userTable.Rows[0]["username"];
-                int _profile = (int)userTable.Rows[0]["profile"];
-                Usuario user = new Usuario(_username, _profile);
+                string username = (string)userTable.Rows[0]["username"];
+                int profile = (int)userTable.Rows[0]["profile"];
+                Usuario user = new Usuario(username, profile);
 
                 // Crea la sesión
                 Sesion sesion = new Sesion(user);
 
                 // Crea el menu
                 PantallaMenu menu = new PantallaMenu(sesion);
-                menu.Show();
 
-                // Cierra el inicio de sesión
-                pantalla.Close();
+                // Cierra el inicio de sesión y abre el menu
+                pantalla.AbrirMenu(menu, sesion);
             }
             else
             {

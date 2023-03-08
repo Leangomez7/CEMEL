@@ -53,13 +53,17 @@
     <Compile Include="Negocio\Entidades\Usuario.cs" />
     <Compile Include="Negocio\Entidades\Validacion\Validador.cs" />
     <Compile Include="Negocio\Menu\GestorMenu.cs" />
+    <Compile Include="Negocio\Usuarios\GestorConsultarUsuarios.cs" />
+    <Compile Include="Negocio\Usuarios\GestorDarDeBajaUsuario.cs" />
+    <Compile Include="Negocio\Usuarios\GestorModificarUsuario.cs" />
+    <Compile Include="Negocio\Usuarios\GestorRegistrarUsuario.cs" />
     <Compile Include="Presentacion\IniciarSesion\PantallaIniciarSesion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Presentacion\IniciarSesion\PantallaIniciarSesion.Designer.cs">
       <DependentUpon>PantallaIniciarSesion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\IniciarSesion\adUsuarios.cs" />
+    <Compile Include="Negocio\Usuarios\adUsuarios.cs" />
     <Compile Include="Negocio\IniciarSesion\GestorIniciarSesion.cs" />
     <Compile Include="Presentacion\Menu\PantallaMenu.cs">
       <SubType>Form</SubType>
@@ -67,10 +71,40 @@
     <Compile Include="Presentacion\Menu\PantallaMenu.Designer.cs">
       <DependentUpon>PantallaMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaConsultarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaConsultarUsuarios.Designer.cs">
+      <DependentUpon>PantallaConsultarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaDarDeBajaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaDarDeBajaUsuario.Designer.cs">
+      <DependentUpon>PantallaDarDeBajaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaModificarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaModificarUsuario.Designer.cs">
+      <DependentUpon>PantallaModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaRegistrarUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\Usuarios\PantallaRegistrarUsuario.Designer.cs">
+      <DependentUpon>PantallaRegistrarUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\IniciarSesion\PantallaIniciarSesion.resx">
       <DependentUpon>PantallaIniciarSesion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Menu\PantallaMenu.resx">
+      <DependentUpon>PantallaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Usuarios\PantallaRegistrarUsuario.resx">
+      <DependentUpon>PantallaRegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

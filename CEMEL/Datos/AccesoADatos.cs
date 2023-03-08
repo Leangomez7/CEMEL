@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
+using System.Windows.Input;
 
 namespace Shopping_Buy_All.ABMS.AccesoADatos
 {
@@ -145,7 +146,7 @@ namespace Shopping_Buy_All.ABMS.AccesoADatos
         }
 
         /// <summary>
-        /// Se encarga de insertar, modificar y borrar registros de la DB
+        /// Se encarga de insertar, modificar y borrar registros de la DB partiendo de un String
         /// </summary>
         /// <param name="comando"></param>
         /// <returns></returns>
@@ -153,6 +154,33 @@ namespace Shopping_Buy_All.ABMS.AccesoADatos
         {
             Conectar();
             command.CommandText = comando;
+            try
+            {
+                // ejecuta la consulta
+                command.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                // mensaje de error que aparece cuando hubo un error con la consulta
+                MessageBox.Show("Hubo un error en la Base de Datos\n Con el comando: \n" + comando + "\nEl error en la base de datos:\n" + ex.Message);
+                // establece el estado de error
+                tipoEstado = TipoEstado.error;
+                return tipoEstado;
+            }
+            Desconectar();
+            return tipoEstado;
+        }
+
+        /// <summary>
+        /// Se encarga de insertar, modificar y borrar registros de la DB partiendo de un SqlCommand
+        /// </summary>
+        /// <param name="comando"></param>
+        /// <returns></returns>
+        public static TipoEstado ModificarDB(SqlCommand comando)
+        {
+            Conectar();
+            command = comando;
+            command.Connection = conexion;
             try
             {
                 // ejecuta la consulta

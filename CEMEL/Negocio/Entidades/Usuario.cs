@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel;
 
 namespace CEMEL.Negocio.Entidades
 {
     public class Usuario
     {
         private string _username;
-        private Perfil _perfil;
+        private EPerfil _perfil;
 
-        public enum Perfil
+        public enum EPerfil
         {
             administrador,
             secretaria,
@@ -37,19 +32,20 @@ namespace CEMEL.Negocio.Entidades
         /// <returns>
         /// 0 : Perfil administrador
         /// 1 : Perfil secretaría
-        /// 2 : Perfil consultorio (la validación se efectúa en el gestor)
+        /// 2 : Perfil consultorio 
+        /// No puede venir otro numero porque la base de datos no lo permite
         /// </returns>
-        private static Perfil SetPerfil(int perfil)
+        private static EPerfil SetPerfil(int perfil)
         {
             if (perfil == 0)
             {
-                return Perfil.administrador;
+                return EPerfil.administrador;
             }
             else if (perfil == 1)
             {
-                return Perfil.secretaria;
+                return EPerfil.secretaria;
             }
-            return Perfil.consultorio;
+            return EPerfil.consultorio;
         }
 
         /// <summary>
@@ -65,7 +61,7 @@ namespace CEMEL.Negocio.Entidades
         /// Devuelve el perfil del usuario
         /// </summary>
         /// <returns></returns>
-        public Perfil GetPerfil()
+        public EPerfil GetPerfil()
         {
             return _perfil;
         }

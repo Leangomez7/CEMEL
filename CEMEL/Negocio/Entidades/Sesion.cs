@@ -16,9 +16,22 @@ namespace CEMEL.Negocio.Entidades
             _loginDate = DateTime.Now;
         }
 
+        /// <summary>
+        /// Devuelve el usuario de la sesión
+        /// </summary>
+        /// <returns></returns>
         public Usuario GetUsuario()
         {
             return _user;
+        }
+
+        /// <summary>
+        /// Devuelve la fecha corta de la sesión
+        /// </summary>
+        /// <returns></returns>
+        public string GetFecha()
+        {
+            return _loginDate.ToShortDateString();
         }
     }
 }

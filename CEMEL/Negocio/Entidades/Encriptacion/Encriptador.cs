@@ -11,10 +11,12 @@ namespace CEMEL.Negocio.Entidades.Encriptacion
     {
         // Código extraido de https://www.youtube.com/watch?v=OUIsmKiEvWc
 
+
         public static byte[] GenerateSalt()
         {
             using (var randomNumberGenerator = new RNGCryptoServiceProvider())
             {
+                
                 var salt = new byte[32];
                 randomNumberGenerator.GetBytes(salt);
                 return salt;

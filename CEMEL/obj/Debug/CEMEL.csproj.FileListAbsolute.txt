@@ -9,3 +9,5 @@ D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\bin\Debug\CEMEL.exe
 D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\bin\Debug\CEMEL.pdb
 D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.exe
 D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.pdb
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.Presentacion.Menu.PantallaMenu.resources
+D:\Lean\Repositorios\CEMEL\CEMEL\CEMEL\obj\Debug\CEMEL.Presentacion.Usuarios.PantallaRegistrarUsuario.resources
