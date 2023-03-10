@@ -275,18 +275,21 @@
             this.tsmiModificarUsuarios.Name = "tsmiModificarUsuarios";
             this.tsmiModificarUsuarios.Size = new System.Drawing.Size(180, 22);
             this.tsmiModificarUsuarios.Text = "Modificar usuarios";
+            this.tsmiModificarUsuarios.Click += new System.EventHandler(this.tsmiModificarUsuarios_Click);
             // 
             // tsmiConsultarUsuarios
             // 
             this.tsmiConsultarUsuarios.Name = "tsmiConsultarUsuarios";
             this.tsmiConsultarUsuarios.Size = new System.Drawing.Size(180, 22);
             this.tsmiConsultarUsuarios.Text = "Consultar usuarios";
+            this.tsmiConsultarUsuarios.Click += new System.EventHandler(this.tsmiConsultarUsuarios_Click);
             // 
             // tsmiDarDeBajaUsuarios
             // 
             this.tsmiDarDeBajaUsuarios.Name = "tsmiDarDeBajaUsuarios";
             this.tsmiDarDeBajaUsuarios.Size = new System.Drawing.Size(180, 22);
             this.tsmiDarDeBajaUsuarios.Text = "Dar de baja usuarios";
+            this.tsmiDarDeBajaUsuarios.Click += new System.EventHandler(this.tsmiDarDeBajaUsuarios_Click);
             // 
             // PantallaMenu
             // 

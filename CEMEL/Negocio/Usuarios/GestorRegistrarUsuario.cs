@@ -3,13 +3,8 @@ using CEMEL.Negocio.Entidades.Validacion;
 using CEMEL.Presentacion.Menu;
 using CEMEL.Presentacion.Usuarios;
 using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace CEMEL.Negocio.Usuarios
 {
@@ -51,13 +46,18 @@ namespace CEMEL.Negocio.Usuarios
         /// true: todos los textbox están completos y las contraseñas coinciden
         /// false: o algún textbox no está completo o las contraseñas no coinciden
         /// </returns>
-        private static bool Validar(string usuario, string contra, string contra2, int perfil)
+        public static bool Validar(string usuario, string contra, string contra2, int perfil)
         {
             if (ValidarVacio(usuario, contra, contra2, perfil))
             {
                 if (contra.Equals(contra2))
                 {
-                    return true;
+                    if (usuario.Length <= 32)
+                    {
+                        return true;
+                    }
+                    MessageBox.Show("El nombre de usuario debe tener 32 caracteres como máximo.");
+                    return false;
                 }
                 MessageBox.Show("Las contraseñas no coinciden.");
                 return false;

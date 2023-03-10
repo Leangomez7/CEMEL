@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CEMEL.Negocio.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace CEMEL.Presentacion.Usuarios
 {
     public partial class PantallaDarDeBajaUsuario : Form
     {
-        public PantallaDarDeBajaUsuario()
+        public PantallaDarDeBajaUsuario(Sesion sesion)
         {
             InitializeComponent();
         }

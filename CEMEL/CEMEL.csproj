@@ -103,6 +103,9 @@
     <EmbeddedResource Include="Presentacion\Menu\PantallaMenu.resx">
       <DependentUpon>PantallaMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\Usuarios\PantallaModificarUsuario.resx">
+      <DependentUpon>PantallaModificarUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\Usuarios\PantallaRegistrarUsuario.resx">
       <DependentUpon>PantallaRegistrarUsuario.cs</DependentUpon>
     </EmbeddedResource>

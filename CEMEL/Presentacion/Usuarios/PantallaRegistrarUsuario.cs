@@ -16,11 +16,26 @@ namespace CEMEL.Presentacion.Usuarios
     public partial class PantallaRegistrarUsuario : Form
     {
         private Sesion _sesion;
+        private Usuario _usuario;
         public PantallaRegistrarUsuario(Sesion sesion)
         {
             InitializeComponent();
             CargarComboBox();
             _sesion = sesion;
+            btnModificarUsuario.Enabled = false;
+            lblTitulo.Text = "Registrar usuario";
+        }
+
+        public PantallaRegistrarUsuario(Sesion sesion, Usuario usuario)
+        {
+            InitializeComponent();
+            CargarComboBox();
+            _sesion = sesion;
+            _usuario = usuario;
+            txtUsuario.Text = usuario.GetUsername();
+            cmbPerfiles.SelectedIndex = usuario.GetNumeroPerfil();
+            btnCargarUsuario.Enabled = false;
+            lblTitulo.Text = "Modificar usuario";
         }
 
         /// <summary>
@@ -30,7 +45,7 @@ namespace CEMEL.Presentacion.Usuarios
         /// <param name="e"></param>
         private void btnCargarUsuario_Click(object sender, EventArgs e)
         {
-                GestorRegistrarUsuario.CargarUsuario(txtUsuario.Text, txtContra.Text, txtRepetirContra.Text, cmbPerfiles.SelectedIndex, cmbPerfiles.SelectedItem.ToString(), this);
+            GestorRegistrarUsuario.CargarUsuario(txtUsuario.Text, txtContra.Text, txtRepetirContra.Text, cmbPerfiles.SelectedIndex, cmbPerfiles.SelectedItem.ToString(), this);
         }
 
         /// <summary>
@@ -62,6 +77,15 @@ namespace CEMEL.Presentacion.Usuarios
         }
 
         /// <summary>
+        /// Devuelve la Usuario
+        /// </summary>
+        /// <returns></returns>
+        public Usuario GetUsuario()
+        {
+            return _usuario;
+        }
+
+        /// <summary>
         /// Carga los items del comboBox
         /// </summary>
         private void CargarComboBox()
@@ -69,6 +93,16 @@ namespace CEMEL.Presentacion.Usuarios
             cmbPerfiles.Items.Add("Administrador");
             cmbPerfiles.Items.Add("Secretaría");
             cmbPerfiles.Items.Add("Consultorio");
+        }
+
+        /// <summary>
+        /// Inicia la modificación de un usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnModificarUsuario_Click(object sender, EventArgs e)
+        {
+            GestorModificarUsuario.ModificarUsuario(txtUsuario.Text, txtContra.Text, txtRepetirContra.Text, cmbPerfiles.SelectedIndex, cmbPerfiles.SelectedItem.ToString(), this);
         }
     }
 }

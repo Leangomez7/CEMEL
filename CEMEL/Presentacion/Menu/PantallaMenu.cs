@@ -73,6 +73,16 @@ namespace CEMEL.Presentacion.Menu
             txtFecha.Text = "Fecha: " + _sesion.GetFecha();
         }
 
+
+        /// <summary>
+        /// Devuelve la sesión
+        /// </summary>
+        /// <returns></returns>
+        private Sesion GetSesion()
+        {
+            return _sesion;
+        }
+
         /// <summary>
         /// Inicia el registro de un usuario
         /// </summary>
@@ -86,12 +96,39 @@ namespace CEMEL.Presentacion.Menu
         }
 
         /// <summary>
-        /// Devuelve la sesión
+        /// Inicia la modificación de un usuario
         /// </summary>
-        /// <returns></returns>
-        private Sesion GetSesion()
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiModificarUsuarios_Click(object sender, EventArgs e)
         {
-            return _sesion;
+            PantallaModificarUsuario pantalla = new PantallaModificarUsuario(GetSesion());
+            pantalla.Show();
+            Close();
+        }
+
+        /// <summary>
+        /// Inicia la consulta de los usuarios
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiConsultarUsuarios_Click(object sender, EventArgs e)
+        {
+            PantallaConsultarUsuarios pantalla = new PantallaConsultarUsuarios(GetSesion());
+            pantalla.Show();
+            Close();
+        }
+
+        /// <summary>
+        /// Inicia la baja de un usuario
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void tsmiDarDeBajaUsuarios_Click(object sender, EventArgs e)
+        {
+            PantallaDarDeBajaUsuario pantalla = new PantallaDarDeBajaUsuario(GetSesion());
+            pantalla.Show();
+            Close();
         }
     }
 }

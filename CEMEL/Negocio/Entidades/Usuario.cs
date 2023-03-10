@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using static CEMEL.Negocio.Entidades.Usuario;
 
 namespace CEMEL.Negocio.Entidades
 {
@@ -64,6 +65,23 @@ namespace CEMEL.Negocio.Entidades
         public EPerfil GetPerfil()
         {
             return _perfil;
+        }
+
+        /// <summary>
+        /// Devuelve el número de perfil del usuario
+        /// </summary>
+        /// <returns></returns>
+        public int GetNumeroPerfil()
+        {
+            if (_perfil == EPerfil.administrador)
+            {
+                return 0;
+            }
+            else if (_perfil == EPerfil.secretaria)
+            {
+                return 1;
+            }
+            return 2;
         }
     }
 }

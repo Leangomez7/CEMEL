@@ -38,6 +38,8 @@
             this.cmbPerfiles = new System.Windows.Forms.ComboBox();
             this.btnCargarUsuario = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnModificarUsuario = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -125,11 +127,32 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // btnModificarUsuario
+            // 
+            this.btnModificarUsuario.Location = new System.Drawing.Point(178, 130);
+            this.btnModificarUsuario.Name = "btnModificarUsuario";
+            this.btnModificarUsuario.Size = new System.Drawing.Size(84, 24);
+            this.btnModificarUsuario.TabIndex = 10;
+            this.btnModificarUsuario.Text = "Aceptar";
+            this.btnModificarUsuario.UseVisualStyleBackColor = true;
+            this.btnModificarUsuario.Click += new System.EventHandler(this.btnModificarUsuario_Click);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(86, 13);
+            this.lblTitulo.TabIndex = 11;
+            this.lblTitulo.Text = "Registrar usuario";
+            // 
             // PantallaRegistrarUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblTitulo);
+            this.Controls.Add(this.btnModificarUsuario);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCargarUsuario);
             this.Controls.Add(this.cmbPerfiles);
@@ -159,5 +182,7 @@
         private System.Windows.Forms.ComboBox cmbPerfiles;
         private System.Windows.Forms.Button btnCargarUsuario;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnModificarUsuario;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }
